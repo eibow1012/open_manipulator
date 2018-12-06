@@ -37,56 +37,56 @@ void OpenManipulator::initOpenManipulator(bool using_actual_robot_state, STRING 
   addWorld("world",   // world name
            "joint1"); // child name
 
-  addJoint("joint1",  // my name
-           "world",   // parent name
-           "joint2",  // child name
-           math::vector3(0.012, 0.0, 0.017),               // relative position
+  addJoint("joint1", // my name
+           "world",  // parent name
+           "joint2", // child name
+           math::vector3(0.0, 0.0, 0.0355), // relative position
            math::convertRPYToRotationMatrix(0.0, 0.0, 0.0), // relative orientation
-           Z_AXIS,    // axis of rotation
-           11,        // actuator id
-           M_PI,      // max joint limit (3.14 rad)
-           -M_PI);    // min joint limit (-3.14 rad)
+           Z_AXIS, // axis of rotation
+           11,     // actuator id
+           M_PI,   // max joint limit (3.14 rad)
+           -M_PI); // min joint limit (-3.14 rad)
 
-  addJoint("joint2",  // my name
-           "joint1",  // parent name
-           "joint3",  // child name
-           math::vector3(0.0, 0.0, 0.0595),                // relative position
+  addJoint("joint2", // my name
+           "joint1", // parent name
+           "joint3", // child name
+           math::vector3(0.0, 0.0, 0.0405), // relative position
            math::convertRPYToRotationMatrix(0.0, 0.0, 0.0), // relative orientation
-           Y_AXIS,    // axis of rotation
-           12,        // actuator id
-           M_PI_2,    // max joint limit (1.67 rad)
-           -2.05);    // min joint limit (-2.05 rad)
+           Y_AXIS, // axis of rotation
+           12,     // actuator id
+           2.07,   // max joint limit
+           -1.85); // min joint limit
 
-  addJoint("joint3",  // my name
-           "joint2",  // parent name
-           "joint4",  // child name
-           math::vector3(0.024, 0.0, 0.128),               // relative position
+  addJoint("joint3", // my name
+           "joint2", // parent name
+           "joint4", // child name
+           math::vector3(0.024, 0.0, 0.148), // relative position
            math::convertRPYToRotationMatrix(0.0, 0.0, 0.0), // relative orientation
-           Y_AXIS,    // axis of rotation
-           13,        // actuator id
-           1.53,      // max joint limit (1.53 rad)
-           -M_PI_2);  // min joint limit (-1.67 rad)
+           Y_AXIS, // axis of rotation
+           13,     // actuator id
+           1.41,   // max joint limit
+           -1.85); // min joint limit
 
-  addJoint("joint4",  // my name
-           "joint3",  // parent name
-           "gripper", // child name
-           math::vector3(0.124, 0.0, 0.0),                 // relative position
+  addJoint("joint4", // my name
+           "joint3", // parent name
+           "gripper",   // child name
+           math::vector3(0.150, 0.0, 0.0), // relative position
            math::convertRPYToRotationMatrix(0.0, 0.0, 0.0), // relative orientation
-           Y_AXIS,    // axis of rotation
-           14,        // actuator id
-           2.0,       // max joint limit (2.0 rad)
-           -1.8);     // min joint limit (-1.8 rad)
+           Y_AXIS, // axis of rotation
+           14,     // actuator id
+           1.78,   // max joint limit
+           -1.64); // min joint limit
 
-  addTool("gripper",  // my name
-          "joint4",   // parent name
-          math::vector3(0.126, 0.0, 0.0),                 // relative position
+  addTool("gripper",   // my name
+          "joint4", // parent name
+          math::vector3(0.08765, 0.0, 0.0), // relative position
           math::convertRPYToRotationMatrix(0.0, 0.0, 0.0), // relative orientation
-          15,         // actuator id
-          0.010,      // max gripper limit (0.01 m)
-          -0.010,     // min gripper limit (-0.01 m)
-          -0.015);    // Change unit from `meter` to `radian`
+          15,     // actuator id
+          1.06,   // max gripper limit
+          -0.72, // min gripper limit
+          -1.0); // Coefficient
 
-          
+
   /*****************************************************************************
   ** Initialize Kinematics 
   *****************************************************************************/
