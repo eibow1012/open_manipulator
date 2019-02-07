@@ -19,7 +19,7 @@
 ## Open Source related to OpenManipulator
 - [open_manipulator](https://github.com/ROBOTIS-GIT/open_manipulator)
 - [open_manipulator_msgs](https://github.com/ROBOTIS-GIT/open_manipulator_msgs)
-- [open_manipulator_simulations](https://github.com/ROBOTIS-GIT/open_manipulator_simulations)
+- [open_manipulator_simulations](https://github.com/ROBOTIS-JAPAN-GIT/open_manipulator_simulations) (ROBOTIS_JAPAN_GIT fork)
 - [open_manipulator_perceptions](https://github.com/ROBOTIS-GIT/open_manipulator_perceptions)
 - [open_manipulator_with_tb3](https://github.com/ROBOTIS-GIT/open_manipulator_with_tb3)
 - [open_manipulator_with_tb3_msgs](https://github.com/ROBOTIS-GIT/open_manipulator_with_tb3_msgs)
